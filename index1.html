@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chet em roi be oi</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="shortcut icon" href="./icons8-love-100.png" type="image/x-icon">
+</head>
+<body>
+    <canvas></canvas>
+    
+    <h1 aria-label="Sarah Fossheim">
+      <span aria-hidden="true">
+        <span style="--index: 1s">I</span>
+      </span>  
+        <span aria-hidden="true" class="spacing"  style="--index: 1.1"></span>
+      <span aria-hidden="true">
+        <span style="--index: 1.2s">L</span>
+        <span style="--index: 1.3s">O</span>
+        <span style="--index: 1.4s">V</span>
+        <span style="--index: 1.5s">E</span>
+      </span>  
+        <span aria-hidden="true" class="spacing"  style="--index: 1.6"></span>
+      <span aria-hidden="true">
+        <span style="--index: 1.7s">Y</span>
+        <span style="--index: 1.8s">O</span>
+        <span style="--index: 1.9s">U</span>
+      </span>  
+        <span aria-hidden="true" class="spacing"  style="--index: 2"> </span>
+      <span aria-hidden="true">
+        <span style="--index: 2.1s">T</span>
+        <span style="--index: 2.2s">O</span>
+        <span style="--index: 2.3s">O</span>
+      </span>
+    
+      <audio src="mp3.mp3" autoplay controls hidden>
+      </audio>
+    
+      
+    
+    <script src="main1.js"></script>
+    <script language="JavaScript">
+      window.onload = function() {
+          document.addEventListener("contextmenu", function(e) {
+              e.preventDefault();
+          }, false);
+          document.addEventListener("keydown", function(e) {
+              //document.onkeydown = function(e) {
+              // "I" key
+              if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+                  disabledEvent(e);
+              }
+              // "J" key
+              if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+                  disabledEvent(e);
+              }
+              // "S" key + macOS
+              if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+                  disabledEvent(e);
+              }
+              // "U" key
+              if (e.ctrlKey && e.keyCode == 85) {
+                  disabledEvent(e);
+              }
+              // "F12" key
+              if (event.keyCode == 123) {
+                  disabledEvent(e);
+              }
+          }, false);
+   
+          function disabledEvent(e) {
+              if (e.stopPropagation) {
+                  e.stopPropagation();
+              } else if (window.event) {
+                  window.event.cancelBubble = true;
+              }
+              e.preventDefault();
+              return false;
+          }
+      };
+  </script>
+
+</body>
+</html>
